@@ -138,7 +138,7 @@ for epoch in range(10000):
         print(f"Training completed successfully after {epoch + 1} epochs.")
 
         # **Save the model (outside the loop)**
-        save_path = r"C:\Users\bobia\trained_model.pth"
+        save_path = f"./models/trained_model{loss}_{epoch + 1}.pth"
 
         # Ensure the directory exists before saving
         os.makedirs(os.path.dirname(save_path), exist_ok=True)
