@@ -9,5 +9,6 @@ spm.SentencePieceTrainer.train(
     model_prefix=model_output_path,  # Path to save the model (without the file extension)
     vocab_size=32000,  # Desired vocabulary size
     character_coverage=0.995,  # How much of the characters in the corpus to cover
-    model_type='unigram'  # Model type (unigram, bpe, etc.)
+    model_type='unigram', # Model type (unigram, bpe, etc.)
+    user_defined_symbols='[MASK],[PAD]'
 )

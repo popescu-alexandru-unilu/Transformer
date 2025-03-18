@@ -1,6 +1,8 @@
 <unk>	0
 <s>	0
 </s>	0
+[MASK]	0
+[PAD]	0
 ▁the	-2.90348
 ▁of	-3.42035
 ▁one	-3.58403
@@ -31996,5 +31998,3 @@ decentralization	-13.8139
 ▁beauvoir	-13.8139
 ▁bakunin	-13.8139
 ▁falstaff	-13.8139
-▁glorify	-13.814
-▁romagna	-13.814
