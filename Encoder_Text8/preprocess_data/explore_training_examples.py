@@ -3,8 +3,8 @@ import pickle
 import sentencepiece as spm
 
 # --- File Paths ---
-training_examples_file = './data/training_examples_cleaned_text8.pkl'
-model_prefix = './models/spm_vocab_text8_32k'  # Path to your trained SentencePiece model
+training_examples_file = '../data/training_examples_cleaned_text8.pkl'
+model_prefix = '../models/spm_vocab_text8_32k'  # Path to your trained SentencePiece model
 
 # --- Load SentencePiece model ---
 sp = spm.SentencePieceProcessor(model_file=f'{model_prefix}.model')
