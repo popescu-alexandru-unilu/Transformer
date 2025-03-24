@@ -1,0 +1,49 @@
+Your decoder covers many of the core components of a GPT-style model, but there are a few enhancements you might consider for a “complete” solution. Here’s a breakdown:
+
+---
+
+## What Your Decoder Already Has
+
+- **Token Embeddings & Positional Encoding:**  
+  Provides the base representation for each token and adds information about token position.
+
+- **Masked Self-Attention:**  
+  Implements causal masking so that each token can only attend to previous tokens.
+
+- **Feed-Forward Network:**  
+  Processes the output of the self-attention with a non-linear transformation.
+
+- **Layer Normalization & Residual Connections:**  
+  These help stabilize training and allow deeper models.
+
+- **Final Projection & Log Softmax:**  
+  Produces probabilities over the vocabulary.
+
+---
+
+## What You Might Add/Improve for a “Complete” GPT-like Model
+
+1. **Multi-Head Attention:**  
+   - **Current:** Your decoder uses a single-head attention mechanism.  
+   - **Enhancement:** GPT uses multi-head attention to capture information from multiple subspaces. This improves expressiveness.
+
+2. **Dropout:**  
+   - **Purpose:** Helps prevent overfitting and improves generalization.  
+   - **Where:** Typically added after self-attention and in the feed-forward layers.
+
+3. **Weight Tying:**  
+   - **Description:** Tying the weights of the embedding layer and the output projection layer can improve performance and reduce model size.
+
+4. **Scalability & Efficiency Considerations:**  
+   - **Dynamic Positional Encodings:** For handling sequences longer than your fixed maximum.
+   - **Advanced Optimizations:** GPT-like models benefit from careful initialization and optimization strategies.
+
+5. **Additional Training Techniques:**  
+   - **Learning Rate Schedulers, Gradient Clipping, etc.:** These are more about training stability rather than architecture but are critical for large-scale language models.
+
+---
+
+## TL;DR
+
+- **Your custom decoder is a solid simplified version of a GPT-like model** — it has the essential components.
+- **For production-level performance, consider adding multi-head attention, dropout, and weight tying.**
